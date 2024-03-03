@@ -13,7 +13,7 @@ export class LocalMoonSeo extends MoonSeo {
         this.vite = await createServer({
             server: { middlewareMode: true },
             appType: 'custom',
-            mode: 'dev',
+            mode: 'ssr',
             base: this.base
         })
         app.use(this.vite.middlewares)
