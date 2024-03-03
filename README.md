@@ -1,29 +1,21 @@
 # moonSeo
 
-This template should help get you started developing with Vue 3 in Vite.
+一个手撸 SSR 改造的 DEMO,在 Vite + Vue 的基础上通过简单的改造让你的项目具备 SEO 功能
 
-## Recommended IDE Setup
-
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
-
-```sh
-npm install
-```
-
-### Compile and Hot-Reload for Development
+## 普通方式启动
 
 ```sh
 npm run dev
 ```
 
-### Compile and Minify for Production
+### SSR 方式启动
 
 ```sh
-npm run build
+npm run ssr
+```
+
+### 打包和启动
+
+```sh
+npm run build && npm run preview
 ```
