@@ -16,7 +16,7 @@ export class ServerMoonSeo extends MoonSeo {
     }
 
     async doGetRender (req, res) {
-        let template = await fs.readFile('./dist/client/index.html', 'utf-8')
+        let template = await fs.readFile('./dist/client/ssr.html', 'utf-8')
         let render = (await import('../dist/server/entry-server.js')).render
         return {template, render}
     }

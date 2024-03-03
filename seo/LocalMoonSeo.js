@@ -21,7 +21,7 @@ export class LocalMoonSeo extends MoonSeo {
 
     async doGetRender (req, res) {
         const url = req.originalUrl.replace(this.base, '')
-        let template = await fs.readFile('./index.html', 'utf-8')
+        let template = await fs.readFile('./ssr.html', 'utf-8')
         template = await this.vite.transformIndexHtml(url, template)
         let render = (await this.vite.ssrLoadModule('./src/entry-server.js')).render
         return {template, render}
