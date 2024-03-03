@@ -23,6 +23,7 @@ export async function render({ req, url, manifest }) {
         console.error(err);
     }
     // dataMap 涉及到水合相关代码，后面会讲到
+    console.log(global.dataMap)
     return { head, html, dataMap: JSON.stringify(global.dataMap) };
 }
 /**

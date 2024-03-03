@@ -45,6 +45,7 @@ export class MoonSeo {
         // 监听所有请求
         this.app.use('*', async (req, res) => {
             try {
+                // 水合相关，需要注意这里需要清空上一次数据
                 global.dataMap = {}
                 const url = req.originalUrl.replace(this.base, '')
                 let {template, render} =  await this.doGetRender(req, res);

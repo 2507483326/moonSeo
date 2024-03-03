@@ -5,15 +5,21 @@ const routes = [
   {
     path: '/',
     name: 'home',
+    meta: {
+      isSsr: true
+    },
     component: HomeView
   },
   {
-    path: '/about',
-    name: 'about',
+    path: '/axios',
+    name: 'axios',
+    meta: {
+      isSsr: true
+    },
     // route level code-splitting
     // this generates a separate chunk (About.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
-    component: () => import('../views/AboutView.vue')
+    component: () => import('../views/AxiosView.vue')
   }
 ]
 
